@@ -1,7 +1,6 @@
 # Die dritte Dimension: Extreme Points – Streamlit-Demo
 
-<!-- TODO nach dem Deploy: direkt hierher den Live-Link setzen (Leerzeile davor und danach):
-**[→ Demo live ausprobieren](https://sebastianhanisch-extreme-points-demo.streamlit.app/)** -->
+**[→ Demo live ausprobieren](https://sebastianhanisch-extreme-points-demo.streamlit.app/)**
 
 Stück 9 der Konzepte-Reihe **„Packen: Reihenfolge und Platzierungsregel“** für die Website „Sebastian Hanisch – Operations Research und Machine Learning“ (ein Verfahren mit wachsendem Beispiel: eine Packung entsteht aus einer Reihenfolge der Teile und einer Regel, wohin das nächste kommt). Stück 7 und 8 haben Rechtecke gepackt; diese Demo packt **Quader** in Behälter: mit **Schichten** (dem Gegenstück zum Regal) und mit **Extreme Points**, ohne und mit Projektionen der Eckpunkte, dazu fünf Sortierschlüssel. Die Fall-Demos zu Container und Palette zeigen die Anwendung samt Kostenmodell; diese Demo erklärt den Mechanismus davor.
 
