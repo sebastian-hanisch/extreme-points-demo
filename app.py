@@ -202,7 +202,7 @@ st.markdown(
     """
 | Annahme | Was passiert, wenn sie verletzt ist |
 |---|---|
-| **Keine Stützbedingung** | Viele Quader liegen auf weniger als 80 % ihrer Grundfläche, einige schweben (Experiment 4). Mit einer Mindest-Stützfläche ändern sich Behälterzahlen und Reihenfolge der Quader; das misst Stück 10. |
+| **Keine Stützbedingung** | Viele Quader liegen auf weniger als 80 % ihrer Grundfläche, einige schweben (Experiment 4). Mit einer Mindest-Stützfläche ändern sich Behälterzahlen und die Platzierung der Quader; das misst Stück 10. |
 | **Keine Drehung** | Dürfen die Quader gedreht werden, ändert sich die Aufgabe, und viele Verfahren nutzen das; die Demo misst es nicht. |
 | **Immer der tiefste, hinterste, linkeste Eckpunkt** | Andere Regeln für die Wahl unter den Eckpunkten können andere Ergebnisse geben; die Demo misst nur diese. |
 | **Die Kanten sind zufällig verteilt** | Nur vier Verteilungen mit festen Bereichen sind gemessen. Andere Verteilungen können anders ausfallen. |

@@ -61,7 +61,7 @@ Alle Zahlen sind Messungen an den Instanzen dieser Demo (feste Seeds), nachgerec
 - Alle Aussagen gelten für Quader ohne Drehung, vier Verteilungen mit festen Bereichen, vier Quaderzahlen, eine Behältergröße, **ohne Stützbedingung, Gewicht und Schwerpunkt** und genau diese drei Verfahren mit der festen Wahl „tiefster, hinterster, linkester Eckpunkt“. Andere Regeln, Drehung und Praxisdaten sind nicht gemessen.
 - Die **Projektionen** der Eckpunkte sind nach eigener Lesart der Originalarbeit (Crainic, Perboli, Tadei 2008) umgesetzt; das Original wurde nicht gelesen, und es wird keine Zahl und keine Aussage der Arbeit übernommen. Die Zahlen gelten für diese Umsetzung.
 - Das Optimum gilt über **alle** Packungen. Es kommt aus CP-SAT mit 30 Sekunden Zeitlimit je Instanz; die nicht entschiedenen Instanzen (1 und 5 von je 400) sind die für CP-SAT schweren und fehlen im Mittel. Bei 40 und 80 Quadern fehlt das Optimum; die Schranke ist in 3D locker, also ist dort nur der Vergleich der Kombinationen belastbar, nicht der Abstand zur Schranke.
-- **Ohne Stützbedingung** gelten die Behälterzahlen für Packungen, die in der Wirklichkeit teilweise nicht stehen würden (Tabelle oben). Mit einer Mindest-Stützfläche ändern sich Zahlen und Reihenfolge der Quader; das misst Stück 10.
+- **Ohne Stützbedingung** gelten die Behälterzahlen für Packungen, die in der Wirklichkeit teilweise nicht stehen würden (Tabelle oben). Mit einer Mindest-Stützfläche ändern sich Zahlen und die Platzierung der Quader; das misst Stück 10.
 - Zur **Laufzeit** der Verfahren macht die Demo keine Aussage.
 - Das Raster sagt nichts über Quader, die einzeln nacheinander ohne Kenntnis der späteren eintreffen (Online-Packen, Konzepte-Reihe Online-Algorithmen).
 
