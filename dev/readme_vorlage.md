@@ -6,7 +6,7 @@ Stück 9 der Konzepte-Reihe **„Packen: Reihenfolge und Platzierungsregel“** 
 
 ## Warum dieses Problem
 
-Beim Regal war die Höhe der beste Schlüssel, bei freier Platzierung die Fläche. In 3D gibt es fünf Schlüssel und drei Verfahren, und die Frage bleibt: Was verändert die Behälterzahl mehr? Die Demo zeigt an zwölf Quadern, die alle in **einen** Behälter passen, dass das nur Extreme Points mit Projektionen und dem Volumen als Schlüssel finden, und misst dasselbe an je 100 Zufallsinstanzen in 16 Zellen. Dazu eine Warnung: Ohne Stützbedingung stehen viele Quader nicht sicher; die Demo zählt sie, Stück 10 verlangt die Stützfläche.
+Beim Regal war die Höhe der beste Schlüssel, bei freier Platzierung die Fläche. In 3D gibt es fünf Schlüssel und drei Verfahren, und die Frage bleibt: Was verändert die Behälterzahl mehr? Die Demo zeigt an zwölf Quadern, die alle in **einen** Behälter passen, dass das von den 15 Kombinationen nur Extreme Points mit Projektionen und dem Volumen als Schlüssel finden, und misst dasselbe an je 100 Zufallsinstanzen in 16 Zellen. Dazu eine Warnung: Ohne Stützbedingung stehen viele Quader nicht sicher; die Demo zählt sie, Stück 10 verlangt die Stützfläche.
 
 ## Modell
 
@@ -28,7 +28,7 @@ Alle Zahlen sind Messungen an den Instanzen dieser Demo (feste Seeds), nachgerec
 | Beispiel 2 (zwölf andere Quader, Schranke 1, Optimum 2) | Die Schranke ist locker. Schichten brauchen mit jedem Schlüssel **3 bis 5** Behälter, EP voll mit Volumen, Grundfläche, Höhe und Kante **2** (Tabelle unten) |
 | Extreme Points gegen Schichten, Instanz für Instanz | EP voll mit Volumen braucht gegenüber Schichten mit Volumen in **1100** von 1600 Instanzen weniger Behälter, in 500 gleich viele und in **0** mehr |
 | Mittelwerte | Im Mittel braucht EP voll mit Volumen in **14** von 16 Zellen weniger Behälter als Schichten mit Höhe (dem besten Schlüssel der Schichten), in zwei gleich (kleine Quader bei 12 und 20: ein Behälter genügt) |
-| Welcher Schlüssel ist am besten? | Bei Schichten die **Höhe** in 14 Zellen (das Volumen in zwei: flach bei n = 20 und n = 80, mit Abständen von 0,01 und 0,06); bei EP voll das **Volumen** in **14** Zellen (bei kleinen Quadern mit n = 20 gleichauf mit Grundfläche, Höhe und Kante, bei n = 12 alle fünf gleich); bei EP einfach ist es das Volumen in 9 Zellen |
+| Welcher Schlüssel ist am besten? | Bei Schichten die **Höhe** in 14 Zellen (das Volumen in zwei: flach bei n = 20 und n = 80, mit Abständen von 0,01 und 0,06); bei EP voll das **Volumen** in **14** Zellen (bei kleinen Quadern mit n = 20 gleichauf mit Grundfläche, Höhe und Kante, bei n = 12 alle fünf gleich); bei EP einfach ist es das Volumen in 9 Zellen allein (in 4 weiteren gleichauf) |
 | Schlüssel und Verfahren gehören zusammen | Mit Schichten ist das Volumen als Schlüssel schlechter als die Höhe (mittlere Quader, n = 80: 3,75 gegen 2,99) |
 | Helfen die Projektionen? | EP voll braucht gegenüber EP einfach (beide mit Volumen) in **275** von 1600 Instanzen weniger Behälter, in 1308 gleich viele und in **17** mehr; im Mittel in **14** von 16 Zellen weniger, in zwei gleich, in keiner mehr |
 | Wie nah am Optimum? | Mit dem jeweils besten Schlüssel treffen bei 12 Quadern Schichten 31 bis 100 %, EP einfach 44 bis 100 %, EP voll 48 bis 100 % der entschiedenen Instanzen das Optimum, bei 20 Quadern 3 bis 100 %, 40 bis 100 % und 49 bis 100 % (100 % nur bei kleinen Quadern) |
@@ -60,7 +60,7 @@ Alle Zahlen sind Messungen an den Instanzen dieser Demo (feste Seeds), nachgerec
 
 - Alle Aussagen gelten für Quader ohne Drehung, vier Verteilungen mit festen Bereichen, vier Quaderzahlen, eine Behältergröße, **ohne Stützbedingung, Gewicht und Schwerpunkt** und genau diese drei Verfahren mit der festen Wahl „tiefster, hinterster, linkester Eckpunkt“. Andere Regeln, Drehung und Praxisdaten sind nicht gemessen.
 - Die **Projektionen** der Eckpunkte sind nach eigener Lesart der Originalarbeit (Crainic, Perboli, Tadei 2008) umgesetzt; das Original wurde nicht gelesen, und es wird keine Zahl und keine Aussage der Arbeit übernommen. Die Zahlen gelten für diese Umsetzung.
-- Das Optimum gilt über **alle** Packungen. Es kommt aus CP-SAT mit 30 Sekunden Zeitlimit je Instanz; die nicht entschiedenen Instanzen (1 und 5 von je 400) sind die schweren und fehlen im Mittel. Bei 40 und 80 Quadern fehlt das Optimum; die Schranke ist in 3D locker, also ist dort nur der Vergleich der Kombinationen belastbar, nicht der Abstand zur Schranke.
+- Das Optimum gilt über **alle** Packungen. Es kommt aus CP-SAT mit 30 Sekunden Zeitlimit je Instanz; die nicht entschiedenen Instanzen (1 und 5 von je 400) sind die für CP-SAT schweren und fehlen im Mittel. Bei 40 und 80 Quadern fehlt das Optimum; die Schranke ist in 3D locker, also ist dort nur der Vergleich der Kombinationen belastbar, nicht der Abstand zur Schranke.
 - **Ohne Stützbedingung** gelten die Behälterzahlen für Packungen, die in der Wirklichkeit teilweise nicht stehen würden (Tabelle oben). Mit einer Mindest-Stützfläche ändern sich Zahlen und Reihenfolge der Quader; das misst Stück 10.
 - Zur **Laufzeit** der Verfahren macht die Demo keine Aussage.
 - Das Raster sagt nichts über Quader, die einzeln nacheinander ohne Kenntnis der späteren eintreffen (Online-Packen, Konzepte-Reihe Online-Algorithmen).

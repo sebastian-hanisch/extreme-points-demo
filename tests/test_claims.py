@@ -208,7 +208,7 @@ def test_bester_schluessel_je_verfahren():
     assert [z for z, x in g.items() if ev.beste_schluessel_zelle(x, C.SCHICHTEN) == [C.VOLUMEN]] == [(3, 1), (3, 3)]
     assert round(g[(3, 1)][C.VOLUMEN][C.SCHICHTEN] - g[(3, 1)][C.HOEHE][C.SCHICHTEN], 2) == -0.01 and round(g[(3, 3)][C.VOLUMEN][C.SCHICHTEN] - g[(3, 3)][C.HOEHE][C.SCHICHTEN], 2) == -0.06
     assert "Bei Schichten die **Höhe** in 14 Zellen (das Volumen in zwei: flach bei n = 20 und n = 80, mit Abständen von 0,01 und 0,06)" in README
-    assert "bei EP voll das **Volumen** in **14** Zellen (bei kleinen Quadern mit n = 20 gleichauf mit Grundfläche, Höhe und Kante, bei n = 12 alle fünf gleich); bei EP einfach ist es das Volumen in 9 Zellen" in README
+    assert "bei EP voll das **Volumen** in **14** Zellen (bei kleinen Quadern mit n = 20 gleichauf mit Grundfläche, Höhe und Kante, bei n = 12 alle fünf gleich); bei EP einfach ist es das Volumen in 9 Zellen allein (in 4 weiteren gleichauf)" in README
     mittel80 = g[(0, 3)]
     assert (mittel80[C.VOLUMEN][C.SCHICHTEN], mittel80[C.HOEHE][C.SCHICHTEN]) == (3.75, 2.99) and "mittlere Quader, n = 80: 3,75 gegen 2,99" in README
 
@@ -235,7 +235,7 @@ def test_optimum_getroffen_schranke_locker_und_offene_instanzen():
     offen12, offen20 = [z[(v, 0)]["offen"] for v in range(4)], [z[(v, 1)]["offen"] for v in range(4)]
     assert (sum(offen12), offen20, sum(offen20)) == (1, [2, 1, 0, 2], 5)
     assert "**1** von 400 bei 12 und **5** von 400 bei 20 Quadern (2 bei mittleren, 1 bei breit gestreuten, 0 bei kleinen und 2 bei flachen bei 20)" in README
-    assert "die nicht entschiedenen Instanzen (1 und 5 von je 400) sind die schweren" in README
+    assert "die nicht entschiedenen Instanzen (1 und 5 von je 400) sind die für CP-SAT schweren" in README
 
 
 def test_stuetzflaeche_in_der_readme():

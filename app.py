@@ -178,7 +178,7 @@ for r in oz:
 st.markdown("\n".join(tab2))
 st.caption(
     "Anteil der entschiedenen Instanzen, in denen die Kombination genau das Optimum braucht: Schichten mit Höhe, EP einfach mit Volumen, EP voll mit Volumen (jeweils der Schlüssel, der zum Verfahren passt). "
-    "„offen“ hinter dem Namen: Zahl der nicht entschiedenen Instanzen; die entschiedenen sind die leichteren. Das Optimum gilt über alle Packungen. Kleine Quader passen bei 12 und 20 Stück in einen Behälter: trivial."
+    "„offen“ hinter dem Namen: Zahl der nicht entschiedenen Instanzen; die entschiedenen sind die für CP-SAT leichteren. Das Optimum gilt über alle Packungen. Kleine Quader passen bei 12 und 20 Stück in einen Behälter: trivial."
 )
 kind, text = verdict_optimum(oz)
 getattr(st, kind)(text)
@@ -206,7 +206,7 @@ st.markdown(
 | **Keine Drehung** | Dürfen die Quader gedreht werden, ändert sich die Aufgabe, und viele Verfahren nutzen das; die Demo misst es nicht. |
 | **Immer der tiefste, hinterste, linkeste Eckpunkt** | Andere Regeln für die Wahl unter den Eckpunkten können andere Ergebnisse geben; die Demo misst nur diese. |
 | **Die Kanten sind zufällig verteilt** | Nur vier Verteilungen mit festen Bereichen sind gemessen. Andere Verteilungen können anders ausfallen. |
-| **Die Schranke ist scharf** | In 3D ist sie locker; bei 40 und 80 Quadern fehlt das Optimum ganz, dort zählt nur der Vergleich der Kombinationen. |
+| **Die Schranke ist (fast) das Optimum** | In 3D ist sie locker; bei 40 und 80 Quadern fehlt das Optimum ganz, dort zählt nur der Vergleich der Kombinationen. |
 | **Alle Quader sind vor dem Packen bekannt** | Wer jeden Quader sofort einsortieren muss, kann nicht sortieren. Das ist Online-Packen. Mehr dazu: [Online](https://sebastianhanisch.net/konzepte-online-algorithmen.html). |
 """
 )
